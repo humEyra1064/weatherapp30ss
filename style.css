@@ -10,12 +10,13 @@
     --darkred: #c3112d;
     --orange: #ff8c00;
   }
-  
+  @import url('https://fonts.googleapis.com/css2?family=Hubballi&family=Yeon+Sung&display=swap');
   * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
     font-weight: normal;
+    font-family: 'Yeon Sung', cursive;
   }
   
   a {
@@ -43,15 +44,23 @@
     display: block;
     max-width: 100%;
     height: auto;
+    transition: transform ease-in .3s;
   }
-  
+  img:hover{
+    transform: scale(1.2);
+  }
   ul {
     list-style: none;
   }
   
   body {
+    height: 100vh;
     font: 1rem/1.3 "Roboto", sans-serif;
-    background: var(--bg_main);
+    background-image: url(https://cdn.pixabay.com/photo/2015/08/30/11/16/sunset-914148_960_720.jpg);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+
     color: var(--text_dark);
     padding: 70px;
   }
@@ -75,8 +84,13 @@
     font-size: 4rem;
     letter-spacing: 0.02em;
     padding: 0 0 30px 0;
+    color: #ff8c00;
+    transition: transform ease-in .3s;
   }
-  
+  .heading:hover{
+    color:white;
+    transform: scale(1.2);
+  }
   .top-banner form {
     position: relative;
     display: flex;
@@ -100,13 +114,15 @@
     letter-spacing: 0.1em;
     padding: 15px 20px;
     margin-left: 15px;
-    border-radius: 5px;
-    background: var(--red);
+    border-radius: 10px;
+    background-color: #ff8c00;
     transition: background 0.3s ease-in-out;
   }
   
   .top-banner form button:hover {
-    background: var(--darkred);
+    background-color: white;
+    color: #ff8c00;
+    transform: scale(1.2);
   }
   
   .top-banner form .msg {
@@ -126,7 +142,7 @@
   
   .ajax-section .cities {
     display: grid;
-    grid-gap: 32px 20px;
+    grid-gap: 32px 30px;
     grid-template-columns: repeat(4, 1fr);
   }
   
@@ -134,8 +150,17 @@
     position: relative;
     padding: 40px 10%;
     border-radius: 20px;
-    background: var(--text_light);
+    transition: transform ease-in .3s;
+    /* background: var(--text_light); */
+    background-color: #ff8c00;
+    
     color: var(--text_med);
+    
+  }
+  .ajax-section .city:hover{
+    transform: scale(1.2);
+    background-color: white;
+    
   }
   
   .ajax-section .city::after {
@@ -172,7 +197,7 @@
     padding: 0.2em 0.6em;
     border-radius: 30px;
     color: var(--text_light);
-    background: var(--orange);
+    background-color: #ff8c00;
   }
   
   .ajax-section .city-icon {
@@ -186,10 +211,12 @@
   –––––––––––––––––––––––––––––––––––––––––––––––––– */
   .page-footer {
     text-align: right;
-    font-size: 1rem;
+    font-size: 2rem;
     color: var(--text_light);
     margin-top: 40px;
+    
   }
+ 
   
   .page-footer span {
     color: var(--red);
