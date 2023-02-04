@@ -61,7 +61,7 @@ const getWeatherDataFormApi = async () => {
         //  bubbling -- kartin i̇çi̇nde her hangi̇ bi̇r yere cli̇k yapildiğinda createdLi nin clik i çalıssın
 
         createdLi.addEventListener("click", (e)=> {
-          alert("E") 
+            window.location.href = `https://openweathermap.org/find?q=${name}`;
         })
 
     } catch (error) {
